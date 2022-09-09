@@ -6,7 +6,7 @@
  *
  * Description: Print a string describing what the main function is doing
  *
- * Return 0 (Success)
+ * Return: 0 (Success)
  */
 int main(void)
 {
