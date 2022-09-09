@@ -2,7 +2,9 @@
 
 
 /**
- * main - Put
+ * main - Printing
+ *
+ * Description: Print a string describing what the main function is doing
  *
  * Return 0 (Success)
  */
