@@ -13,7 +13,7 @@ int main(void)
 	char ch;
 	char CH;
 
-	ch = 'a';	
+	ch = 'a';
 	CH = 'A';
 	while (ch <= 'z')
 	{
@@ -25,6 +25,6 @@ int main(void)
 		putchar(CH);
 		CH = CH + 1;
 	}
-        putchar('\n');
-        return (0);
+	putchar('\n');
+	return (0);
 }
