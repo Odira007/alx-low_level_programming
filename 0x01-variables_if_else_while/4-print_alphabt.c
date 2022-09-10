@@ -11,26 +11,13 @@
 int main(void)
 {
 	char f;
-	char m;
-	char l;
 
-	f = 'a';
-	m = 'f';
-	l = 'r';
-	while (f < 'e')
+	for (f = 'a'; f <= 'z'; f++)
 	{
-		putchar(f);
-		f = f + 1;
-	}
-	while (m > 'e' && m < 'q')
-	{
-		putchar(m);
-		m = m + 1;
-	}
-	while (l > 'q' && l <= 'z')
-	{
-		putchar(l);
-		l = l + 1;
+		if (f != 'q' && f != 'e')
+		{
+			putchar(f);
+		}
 	}
 	putchar('\n');
 	return (0);
