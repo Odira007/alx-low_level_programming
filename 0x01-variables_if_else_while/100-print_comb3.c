@@ -10,18 +10,29 @@
  */
 int main(void)
 {
-	int n;
+	int n1;
+	int n2;
 
-	for (n = 0; n < 100; n++)
+	n1 = 0;
+	while(n1 <= 9)
 	{
-		putchar((n / 10) + '0');
-		putchar((n % 10) + '0');
-		if (n != 99)
+		n2 = 0;
+		while (n2 <= 9)
 		{
-			putchar(',');
-			putchar(' ');
+			if(n1 != n2 && n1 < n2)
+			{
+				putchar(n1 + 48);
+				putchar(n2 + 48);
+			if(n1 + n2 != 17)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			}
+			++n2;
 		}
+		++n1;
 	}
-	putchar('\n');
-	return (0);
+		putchar('\n');
+		return (0);
 }
