@@ -14,16 +14,16 @@ int main(void)
 	int n2;
 
 	n1 = 0;
-	while(n1 <= 9)
+	while (n1 <= 9)
 	{
 		n2 = 0;
 		while (n2 <= 9)
 		{
-			if(n1 != n2 && n1 < n2)
+			if (n1 != n2 && n1 < n2)
 			{
 				putchar(n1 + 48);
 				putchar(n2 + 48);
-			if(n1 + n2 != 17)
+			if (n1 + n2 != 17)
 			{
 				putchar(',');
 				putchar(' ');
