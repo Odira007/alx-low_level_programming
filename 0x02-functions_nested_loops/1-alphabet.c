@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * print_alphabet - Alpha
@@ -7,13 +7,6 @@
  *
  * Return: 0 (Success)
  */
-void print_alphabet(void);
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
 void print_alphabet(void)
 {
 	char s;
@@ -21,9 +14,8 @@ void print_alphabet(void)
 	s ='a';
 	while(s <= 'z')
 	{
-		putchar(s);
+		_putchar(s);
 		s++;
 	}
-	putchar('\n');
-	return;
+	_putchar('\n');
 }
