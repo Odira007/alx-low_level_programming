@@ -2,7 +2,7 @@
 
 /**
  * _islower - lowercase or not?
- * @c is used as the parameter of the function
+ * @c: is used as the parameter of the function
  *
  * Description: Check if a letter is lowercase or not
  *
