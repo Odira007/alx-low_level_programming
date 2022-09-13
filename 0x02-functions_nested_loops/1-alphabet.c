@@ -25,4 +25,5 @@ void print_alphabet(void)
 		s++;
 	}
 	putchar('\n');
+	return;
 }
