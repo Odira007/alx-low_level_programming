@@ -3,16 +3,16 @@
 /**
  * _abs - absolute value
  *
- * Description: print the absolute value of a number
+ * @n: print the absolute value of a number
  *
- * Rerurn: 0
+ * Return: 0
  */
 int _abs(int n)
 {
-	if (n < 0 || n > 0)
+	if (n > 0 || n == 0)
 	{
 		return (n);
 	}
 	else
-		return (0);
+		return (n * -1);
 }
