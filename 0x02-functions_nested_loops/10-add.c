@@ -2,7 +2,9 @@
 
 /**
  * add - add two numbers
- * a, b: the parameters
+ * @a: the first parameter
+ *
+ * @b: the second parameter
  *
  * Return: 0
  */
