@@ -7,7 +7,7 @@
  */
 void print_most_numbers(void)
 {
-	int n;
+	char n;
 
 	for (n = '0'; n <= '9'; n++)
 	{
@@ -17,5 +17,4 @@ void print_most_numbers(void)
 		}
 	}
 	_putchar('\n');
-	return;
 }
