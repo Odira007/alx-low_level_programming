@@ -1,17 +1,17 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
  * print_numbers - Function that prints numbers from 0 to 9
- * @n: local variable
  * Return: Always 0
  */
 void print_most_numbers(void)
 {
-	char n;
+	int n;
 
-	for (n = '0'; n <= '9'; n++)
+	for (n = 48; n < 58; n++)
 	{
-		if (n != '2' && n != '4')
+		if (n != 50 && n != 52)
 		{
 			_putchar(n);
 		}
