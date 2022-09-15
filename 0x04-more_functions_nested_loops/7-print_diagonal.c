@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -5,7 +6,7 @@
  *
  * @n: The argument
  *
- * Return: Always 0
+ * Return: returns nothing
  */
 void print_diagonal(int n)
 {
@@ -20,8 +21,7 @@ void print_diagonal(int n)
 				putchar(' ');
 			}
 			putchar('\\');
-
-			if (len == (n -1))
+			if (len == (n - 1))
 			{
 				continue;
 			}
