@@ -4,8 +4,6 @@
  * print_number - prints number
  *
  * @n: integer to print to character
- *
- * Return: Always 0
  */
 
 void print_number(int n)
@@ -45,5 +43,4 @@ void print_number(int n)
 		y = y % d;
 		d = d / 10;
 	}
-	return (0);
 }
