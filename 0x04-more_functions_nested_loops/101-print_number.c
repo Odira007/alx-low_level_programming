@@ -4,6 +4,8 @@
  * print_number - prints number
  *
  * @n: integer to print to character
+ *
+ * Return: Always 0
  */
 
 void print_number(int n)
@@ -16,11 +18,11 @@ void print_number(int n)
 
 	if (n == 0)
 	{
-		_putchar('0');
+		putchar('0');
 	}
 	if (n < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		n = n + 1;
 		n = -n;
 		y = n;
@@ -28,7 +30,6 @@ void print_number(int n)
 		x += 1;
 		y += 1;
 	}
-
 	while (x != 0)
 	{
 		x = x / 10;
@@ -40,8 +41,9 @@ void print_number(int n)
 	}
 	for (i = 0; i < c; i++)
 	{
-		_putchar(y / d + '0');
+		putchar(y / d + '0');
 		y = y % d;
 		d = d / 10;
 	}
+	return (0);
 }
