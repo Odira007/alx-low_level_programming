@@ -16,11 +16,11 @@ void print_number(int n)
 
 	if (n == 0)
 	{
-		putchar('0');
+		_putchar('0');
 	}
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		n = n + 1;
 		n = -n;
 		y = n;
@@ -40,7 +40,7 @@ void print_number(int n)
 	}
 	for (i = 0; i < c; i++)
 	{
-		putchar(y / d + '0');
+		_putchar(y / d + '0');
 		y = y % d;
 		d = d / 10;
 	}
