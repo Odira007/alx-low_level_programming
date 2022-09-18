@@ -14,14 +14,14 @@ int main(void)
 	int n = 2;
 
 	printf("%ld, %ld, ", a, b);
-	while (n < 50)
+	while (n < 49)
 	{
 		a = b;
 		b = seq;
 		seq = a + b;
 		n++;
 		printf("%ld", seq);
-		if (n < 50)
+		if (n < 49)
 		{
 			printf(", ");
 		}
