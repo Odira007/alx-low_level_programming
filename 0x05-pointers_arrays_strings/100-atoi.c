@@ -13,8 +13,9 @@ int _atoi(char *s)
 	int c;
 	int d = 1;
 	int num = 0;
+	int len = strlen(s);
 
-	for (i = 0; i < _strlen(s); i++)
+	for (i = 0; i < len; i++)
 	{
 		if (!(s[i] >= '0' && s[i] <= '9') && c > 0)
 			break;
