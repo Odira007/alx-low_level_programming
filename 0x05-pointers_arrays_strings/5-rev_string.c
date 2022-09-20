@@ -6,24 +6,18 @@
  * @s: the parameter
  * Return: nothing
  */
-void rev_string(char *s);
-
-int main(void)
-{
-	char s[11] = "Holberton!";
-	printf("%s\n", s);
-	rev_string(s);
-	printf("%s\n", s);
-	return (0);
-}
 void rev_string(char *s)
 {
+	int i;
+	char t;
 	int len;
 
 	len = strlen(s);
-	while (len--)
+	for (i = 0; i < len / 2; i++)
 	{
-		putchar(s[len]);
+		t = s[i];
+		s[i] = s[_strlen(s) - i - 1];
+		s[_strlen(s) - i - 1] = t;
 	}
 	putchar('\n');
 }
