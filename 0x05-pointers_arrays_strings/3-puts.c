@@ -3,7 +3,7 @@
 
 /**
  * _puts - write a function that prints a string
- * @str - the parameter
+ * @str: the parameter
  *
  * Return: nothing
  */
