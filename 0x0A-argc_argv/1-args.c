@@ -5,12 +5,15 @@
  * main - prints number of arguments passed to function
  * @argc: argument count variable
  * @argv: array of strings
- * Return: number of args
+ * Return: always 0
  */
 int main(int argc, char *argv[])
 {
+	int i;
+
 	(void)*argv;
-	(void)argc;
-	printf("%d\n", argc);
+	for (i = 0; i <= argc; i++)
+	{}
+	printf("%d\n", i);
 	return (0);
 }
