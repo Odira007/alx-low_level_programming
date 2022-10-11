@@ -9,12 +9,14 @@
  * @age: age
  * @owner: owner
  * Description: This function creates a new dog
+ * Return: returns d
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i = 0, j = 0, k;
 
 	dog_t *d;
+
 	while (name[i] != '\0')
 		i++;
 	while (owner[j] != '\0')
@@ -25,7 +27,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	d->name = malloc(i *sizeof(d->name));
+	d->name = malloc(i * sizeof(d->name));
 	if (d->name == NULL)
 	{
 		free(d->name);
@@ -37,13 +39,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		d->name[k] = name[k];
 		d->age = age;
 	}
-	d->owner = malloc(j *sizeof(d->owner));
+	d->owner = malloc(j * sizeof(d->owner));
 	if (d->owner == NULL)
 	{
 		free(d->owner);
 		free(d->name);
 		free(d);
-		return(NULL);
+		return (NULL);
 	}
 	for (k = 0; k <= j; k++)
 	{
