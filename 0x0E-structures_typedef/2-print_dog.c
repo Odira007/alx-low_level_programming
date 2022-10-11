@@ -3,10 +3,8 @@
 
 /**
  * print_dog - the function that prints a struct dog
- * @d: dog
- * @name: name
- * @age: age
- * @owner: owner
+ * @d: the struct
+ *
  * Description: This function prints a struct dog on the terminal
  */
 
