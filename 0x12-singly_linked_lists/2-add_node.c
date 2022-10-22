@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -17,7 +16,7 @@ int _strlen(const char *s)
 	{
 		i++;
 	}
-	return (0);
+	return (i);
 }
 
 /**
@@ -38,13 +37,9 @@ list_t *add_node(list_t **head, const char *str)
 		free(newNode);
 		return (NULL);
 	}
-	else
-	{
-		newNode->str = strdup(str);
-		newNode->len = _strlen(str);
-		newNode->next = *(head);
-
-		*head = newNode;
-	}
+	newNode->len = _strlen(str);
+	newNode->str = strdup(str);
+	newNode->next = *(head);
+	*head = newNode;
 	return (newNode);
 }
