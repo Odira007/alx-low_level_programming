@@ -52,6 +52,7 @@ int key_gen(void)
 			printf("%c", password[i]);
 		}
 	}
+	printf("\n");
 	return (0);
 }
 
