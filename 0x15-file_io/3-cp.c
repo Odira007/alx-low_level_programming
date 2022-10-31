@@ -10,6 +10,7 @@
  * copy_file - copies the contents of one file into another
  * @filename1: name of the source file
  * @filename2: name of the destination file
+ * @letters: number of letters it should read or write
  * Return: the new file
  */
 ssize_t copy_file(const char *filename1, const char *filename2, size_t letters)
@@ -41,7 +42,7 @@ ssize_t copy_file(const char *filename1, const char *filename2, size_t letters)
 	if (close(op) == -1 || close(op2) == -1)
 	{
 		dprintf(2, "Error: Can't close fd file descriptors\n");
-		exit (100);
+		exit(100);
 	}
 	filename2 = filename1;
 
@@ -53,7 +54,8 @@ ssize_t copy_file(const char *filename1, const char *filename2, size_t letters)
 
 /**
  * main - checks the code
- *
+ * @ac: argument count
+ * @av: array of strings
  * Return: Always 0.
  */
 int main(int ac, char **av)
