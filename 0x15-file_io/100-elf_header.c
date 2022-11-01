@@ -49,7 +49,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	printf("   Magic:   ");
+	printf("  Magic:   ");
 	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", e_ident[index]);
@@ -66,9 +66,9 @@ void print_magic(unsigned char *e_ident)
  */
 void print_class(unsigned char *e_ident)
 {
-	printf("    Class                     ");
+	printf("  Class                                   ");
 
-	switch(e_ident[EI_CLASS])
+	switch (e_ident[EI_CLASS])
 	{
 		case ELFCLASSNONE:
 			printf("none\n");
@@ -90,9 +90,9 @@ void print_class(unsigned char *e_ident)
  */
 void print_data(unsigned char *e_ident)
 {
-	printf("    Data                     ");
+	printf("  Data                                  ");
 
-	switch(e_ident[EI_DATA])
+	switch (e_ident[EI_DATA])
 	{
 		case ELFDATANONE:
 			printf("none\n");
@@ -114,10 +114,10 @@ void print_data(unsigned char *e_ident)
  */
 void print_version(unsigned char *e_ident)
 {
-	printf("   Version                    %d",
+	printf("  Version                                  %d",
 		e_ident[EI_VERSION]);
 
-	switch(e_ident[EI_VERSION])
+	switch (e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
 			printf("  (current)\n");
@@ -164,10 +164,10 @@ void print_osabi(unsigned char *e_ident)
 			break;
 		case ELFOSABI_ARM:
 		       printf("ARM\n");
-		       break;
+		break;
 		case ELFOSABI_STANDALONE:
 		       printf("Standalone app\n");
-		       break;
+		break;
 		default:
 		       printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
@@ -179,7 +179,7 @@ void print_osabi(unsigned char *e_ident)
  */
 void print_abi(unsigned char *e_ident)
 {
-	printf("    ABI Version:                    %d\n",
+	printf("  ABI Version:                              %d\n",
 		e_ident[EI_ABIVERSION]);
 }
 
@@ -191,9 +191,9 @@ void print_abi(unsigned char *e_ident)
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
-		e_type >>= 0;
+		e_type >>= 8;
 
-	printf("   Type                              ");
+	printf("  Type                                         ");
 
 	switch (e_type)
 	{
@@ -224,7 +224,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
-	printf("   Entry point address:                   ");
+	printf("  Entry point address:                            ");
 
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
@@ -248,7 +248,7 @@ void close_elf(int elf)
 	if (close(elf) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error, can't close fd %d\n", elf);
-		exit (98);
+		exit(98);
 	}
 }
 
@@ -285,7 +285,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		free(header);
 		close_elf(o);
 		dprintf(2, "Error: '%s': No such file\n", argv[1]);
-		exit (98);
+		exit(98);
 	}
 	check_elf(header->e_ident);
 	printf("ELF header: \n");
@@ -296,7 +296,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_osabi(header->e_ident);
 	print_abi(header->e_ident);
 	print_type(header->e_type, header->e_ident);
-	print_entry(header->e_type, header->e_ident);
+	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
 	close_elf(o);
